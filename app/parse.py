@@ -17,7 +17,7 @@ COMPUTERS_URL = urljoin(BASE_URL, "test-sites/e-commerce/more/computers")
 LAPTOPS_URL = urljoin(BASE_URL, "test-sites/e-commerce/more/computers/laptops")
 TABLETS_URL = urljoin(BASE_URL, "test-sites/e-commerce/more/computers/tablets")
 PHONES_URL = urljoin(BASE_URL, "test-sites/e-commerce/more/phones")
-TOUGH_URL = urljoin(BASE_URL, "test-sites/e-commerce/more/phones/touch")
+TOUCH_URL = urljoin(BASE_URL, "test-sites/e-commerce/more/phones/touch")
 
 _driver: WebDriver | None = None
 
@@ -118,7 +118,7 @@ def get_all_products() -> None:
         write_product_to_csv("laptops.csv", get_page_products(LAPTOPS_URL))
         write_product_to_csv("tablets.csv", get_page_products(TABLETS_URL))
         write_product_to_csv("phones.csv", get_page_products(PHONES_URL))
-        write_product_to_csv("touch.csv", get_page_products(TOUGH_URL))
+        write_product_to_csv("touch.csv", get_page_products(TOUCH_URL))
 
 
 if __name__ == "__main__":
